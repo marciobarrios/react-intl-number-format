@@ -1,0 +1,33 @@
+---
+name: Number
+menu: Components
+---
+
+import { Playground, Props } from "docz"
+import { Number } from "."
+
+# Number
+
+This React component let you format any number based on these criteria:
+
+- Using props
+- Using a Context Provider
+- Guessing the default browser locale
+
+## Props
+
+Props are matching `Intl.NumberFormat` parameters (with some exception). So [if you need a detailed explanation for any prop please visit their documentation site](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters).
+
+<Props of={Number} />
+
+## Usage
+
+<Playground style={{ display: "flex", justifyContent: "space-around" }}>
+  <Number>201300.9832</Number>
+  <Number locale="de-DE">201300.9832</Number>
+  <Number as="span" maximumFractionDigits={3}>
+    201300.9832
+  </Number>
+</Playground>
+
+The recommended way to use this component is within a React Context Provider to set a global config. You can see an example in the README.

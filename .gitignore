@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules
+
+# dotenv environment variables file
+.envrc
+
+# build directory
+dist
+
+# Operating system temp files
+.DS_Store
+
+# Docz in development
+.docz
+
+# Rollup
+.rpt2_cache
+
+#IDE settings files
+.vscode

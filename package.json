@@ -1,0 +1,94 @@
+{
+  "name": "react-intl-number-format",
+  "version": "0.0.1",
+  "description": "Number formatter based on the ECMAScript Internationalization API",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "commit": "npx git-cz",
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle --jsx React.createElement watch",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "lint": "eslint src/**",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciobarrios/react-intl-number-format.git"
+  },
+  "keywords": [
+    "react",
+    "currency",
+    "numberformat",
+    "format",
+    "formatter",
+    "internationalization"
+  ],
+  "author": "Marcio Barrios <marciobarrios@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marciobarrios/react-intl-number-format/issues"
+  },
+  "homepage": "https://github.com/marciobarrios/react-intl-number-format#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.mdx": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^24.8.0",
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.5.0",
+    "husky": "^2.3.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.1.7",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.17.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-testing-library": "^7.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "get-user-locale": "^1.1.1"
+  }
+}
