@@ -1,7 +1,7 @@
 {
   "name": "react-intl-number-format",
   "version": "0.0.0-development",
-  "description": "Number formatter based on the ECMAScript Internationalization API",
+  "description": "Number and currency formatter based on the ECMAScript Internationalization API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "unpkg": "dist/index.umd.js",
@@ -16,7 +16,8 @@
     "docz:build": "docz build",
     "lint": "eslint src/**",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prePublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
