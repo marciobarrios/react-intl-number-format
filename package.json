@@ -1,6 +1,6 @@
 {
   "name": "react-intl-number-format",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Number formatter based on the ECMAScript Internationalization API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marciobarrios/react-intl-number-format.git"
+    "url": "https://github.com/marciobarrios/react-intl-number-format.git"
   },
   "keywords": [
     "react",
@@ -83,7 +83,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-testing-library": "^7.0.1"
+    "react-testing-library": "^7.0.1",
+    "semantic-release": "^15.13.12"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
