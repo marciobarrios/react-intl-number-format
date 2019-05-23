@@ -4,6 +4,8 @@ Tiny react component that wraps the ECMAScript Internationalization API with san
 
 To see in detail the components `Number` and `Currency` with the list of props and examples please [check the documentation in Docz](https://react-intl-number-format.netlify.com/).
 
+You can also play with `react-intl-number-format` in a [CodeSandbox](https://codesandbox.io/s/reactintlnumberformat-3o5yg).
+
 ## Features
 
 - Effortless format numbers and currencies for different locales
@@ -26,13 +28,19 @@ npm i react-intl-number-format
 
 ## Usage
 
-This is the easiest way to use it:
+This is the easiest way to use `Number` or `Currency` formatter components:
 
 ```js
-import { Number } from "react-intl-number-format"
+import { Number, Currency } from "react-intl-number-format"
 
-const HelloWorld = () => (
-  <Number locale="de-DE">20000</Number> // renders 20.000
+// renders 20.000
+const Foo = () => (
+  <Number locale="de-DE">20000</Number>
+)
+
+// renders $20,000.00
+const Bar = () => (
+  <Currency locale="en-US" currency="USD">20000</Currency>
 )
 ```
 
@@ -66,7 +74,8 @@ const App = () => (
 import { Currency } from "react-intl-number-format"
 
 const HelloWorld = () => (
-  <Currency>20000</Currency> // renders $20,000 (based on the provider config)
+  // renders $20,000 (based on the provider config)
+  <Currency>20000</Currency>
 )
 ```
 
