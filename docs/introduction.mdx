@@ -1,0 +1,56 @@
+---
+name: Introduction
+route: /
+---
+
+import { Link } from "docz"
+
+# react-intl-number-format
+
+Tiny react component that wraps the ECMAScript Internationalization API with sane defaults to work with numbers and currencies.
+
+## Features
+
+- Effortless format numbers and currencies for different locales
+- Relies in the standard [Intl.NumberFormat constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat)
+- Possibility to use it as an standalone React Component using props to configure it
+- Possibility to use a general config using a React Context Provider
+- Detects automatically the browser language as a default locale
+- Exposes a function to update the Provider config
+- Ability to render a number or a currency with any html tag
+- Props match [Intl.NumberFormat constructor arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters)
+
+## Support
+
+- [Works in any modern browsers, and IE >= 11](https://caniuse.com/#feat=internationalization)
+
+## Installation
+
+```shell
+npm i react-intl-number-format
+```
+
+## Usage
+
+This is the easiest way to use it:
+
+```js
+import { Number } from "react-intl-number-format"
+
+const HelloWorld = () => (
+  <Number locale="de-DE">20000</Number> // renders 20.000
+)
+```
+
+You don't even need to pass a `locale` prop, by default it will try guess the locale from the browser.
+
+<Link to="/recipes">Check the Recipes page to see the recommended way to use it and other advanced topics.</Link>
+
+## Possible imports
+
+You can import several things from `react-intl-number-format`, let's check the possibilities:
+
+- `Number` Component to format numbers
+- `Currency` Component to format currencies
+- `IntlProvider` to set a global configuration
+- `useIntl` hook to update the configuration

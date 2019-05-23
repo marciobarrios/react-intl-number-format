@@ -1,0 +1,73 @@
+---
+name: Recipes
+route: /recipes
+---
+
+# Recipes
+
+## Recommended usage with a React Context Provider
+
+The recommended way to use it would be with a Context.Provider, this will allow you to have a global configuration so you don't need to pass props every time you format a number or a currency.
+
+A provider `IntlProvider` is exposed with a default config, but you can you set your own config and use it in your `App` component.
+
+```js
+// In your App.js or similar...
+import { IntlProvider } from "react-intl-number-format"
+
+const intlConfig = {
+  locale: "en-US",
+  options: {
+    currency: "USD",
+    maximumFractionDigits: 2,
+  },
+}
+
+const App = () => <IntlProvider config={intlConfig}>...</IntlProvider>
+
+// In any other part of your code
+import { Currency } from "react-intl-number-format"
+
+const HelloWorld = () => (
+  <Currency>20000</Currency> // renders $20,000 (based on the provider config)
+)
+```
+
+The configuration object that `IntlProvider` expects is basically matching [the arguments from Intl.NumberFormat constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters).
+
+## Change the Context Provider configuration programatically
+
+You can update the Provider configuration easily:
+
+```js
+// In your App.js or similar...
+import { IntlProvider } from "react-intl-number-format"
+
+const intlConfig = {
+  locale: "en-US",
+  options: {
+    currency: "USD",
+    maximumFractionDigits: 2,
+  },
+}
+
+const App = () => <IntlProvider config={intlConfig}>...</IntlProvider>
+
+// In any other part of your code
+import { useIntl } from "react-intl-number-format"
+
+const UpdateFormatConfig = () => (
+  const { setConfig } = useIntl()
+
+  const newConfig = {
+    locale: "de-DE",
+    options: {
+      currency: "EUR",
+    },
+  }
+
+  return (
+    <button onClick={() => setConfig(newConfig)}>Update format config</button>
+  )
+)
+```
