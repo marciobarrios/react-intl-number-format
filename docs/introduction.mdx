@@ -32,13 +32,19 @@ npm i react-intl-number-format
 
 ## Usage
 
-This is the easiest way to use it:
+This is the easiest way to use `Number` or `Currency` formatter components:
 
 ```js
-import { Number } from "react-intl-number-format"
+import { Number, Currency } from "react-intl-number-format"
 
-const HelloWorld = () => (
-  <Number locale="de-DE">20000</Number> // renders 20.000
+// renders 20.000
+const Foo = () => (
+  <Number locale="de-DE">20000</Number>
+)
+
+// renders $20,000.00
+const Bar = () => (
+  <Currency locale="en-US" currency="USD">20000</Currency>
 )
 ```
 
