@@ -1,11 +1,8 @@
----
-name: Readme
-route: /
----
-
 # react-intl-number-format
 
 Tiny react component that wraps the ECMAScript Internationalization API with sane defaults to work with numbers and currencies.
+
+To see in detail the components `Number` and `Currency` with the list of props and examples please [check the documentation in Docz](https://react-intl-number-format.netlify.com/).
 
 ## Features
 
@@ -45,11 +42,13 @@ You don't even need to pass a `locale` prop, by default it will try guess the lo
 
 The recommended way to use it would be with a Context.Provider, this will allow you to have a global configuration so you don't need to pass props every time you format a number or a currency.
 
+A provider `IntlProvider` is exposed with a default config, but you can you set your own config and use it in your `App` component.
+
 ```js
 // In your App.js or similar...
 import { IntlProvider } from "react-intl-number-format"
 
-const IntlConfig = {
+const intlConfig = {
   locale: "en-US",
   options: {
     currency: "USD",
@@ -58,7 +57,7 @@ const IntlConfig = {
 }
 
 const App = () => (
-  <IntlProvider config={IntlConfig}>
+  <IntlProvider config={intlConfig}>
     ...
   </IntlProvider>
 )
@@ -70,6 +69,7 @@ const HelloWorld = () => (
   <Currency>20000</Currency> // renders $20,000 (based on the provider config)
 )
 ```
+
 The configuration object that `IntlProvider` expects is basically matching [the arguments from Intl.NumberFormat constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters).
 
 
