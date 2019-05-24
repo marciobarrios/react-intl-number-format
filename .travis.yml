@@ -4,6 +4,12 @@ node_js:
   - lts/*
   - node
 
+script:
+  - npm test
+
+after_success:
+  - npx codecov
+
 jobs:
   include:
     - stage: release
@@ -12,5 +18,4 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - npx codecov
           - npx semantic-release
