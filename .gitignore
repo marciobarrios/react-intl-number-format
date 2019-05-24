@@ -20,6 +20,9 @@ dist
 # Docz in development
 .docz
 
+# Coverage report
+coverage
+
 # Rollup
 .rpt2_cache
 

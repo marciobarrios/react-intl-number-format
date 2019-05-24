@@ -1,9 +1,10 @@
 ---
 name: Currency
+route: /currency
 menu: Components
 ---
 
-import { Playground, Props, Link } from "docz"
+import { Playground, Link } from "docz"
 import { Currency } from "."
 
 # Currency
@@ -14,11 +15,15 @@ This React component let you format any currency based on these criteria:
 - Using a Context Provider
 - Guessing the default browser locale
 
+Behind the curtain this component is using `Number` component with some default props.
+
 ## Props
+
+`Currency` props are the same as `Number` props, but with the `currency` prop set by default, which is the one that enables the currency formatting.
 
 Props are matching `Intl.NumberFormat` parameters (with some exception). So [if you need a detailed explanation for any prop please visit their documentation site](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters).
 
-<Props of={Currency} />
+<Link to="/number">Go to Number documentation to check the props table</Link>.
 
 ## Usage
 
