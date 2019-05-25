@@ -5,7 +5,7 @@
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/marciobarrios/react-intl-number-format/master.svg?style=flat-square)](https://codecov.io/gh/marciobarrios/react-intl-number-format/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Tiny React components that wraps the ECMAScript Internationalization API with sane defaults to format numbers and currencies.
+Tiny React components wrapping the ECMAScript Internationalization API with sane defaults to format numbers and currencies.
 
 To see in detail the components `Number` and `Currency` with the list of props and examples please [check the documentation site](https://react-intl-number-format.netlify.com/).
 
