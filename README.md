@@ -5,9 +5,9 @@
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/marciobarrios/react-intl-number-format/master.svg?style=flat-square)](https://codecov.io/gh/marciobarrios/react-intl-number-format/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Tiny react component that wraps the ECMAScript Internationalization API with sane defaults to work with numbers and currencies.
+Tiny React components that wraps the ECMAScript Internationalization API with sane defaults to format numbers and currencies.
 
-To see in detail the components `Number` and `Currency` with the list of props and examples please [check the documentation in Docz](https://react-intl-number-format.netlify.com/).
+To see in detail the components `Number` and `Currency` with the list of props and examples please [check the documentation site](https://react-intl-number-format.netlify.com/).
 
 You can also play with `react-intl-number-format` in a [CodeSandbox](https://codesandbox.io/s/reactintlnumberformat-3o5yg).
 
@@ -15,14 +15,12 @@ You can also play with `react-intl-number-format` in a [CodeSandbox](https://cod
 
 - Effortless format numbers and currencies for different locales
 - Relies in the standard [Intl.NumberFormat constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat)
-- Possibility to use it as an standalone React Component using props to configure it
-- Possibility to use a general config using a React Context Provider
+- Use as an standalone React Component using props to configure it
+- Use with a global configuration using a React Context Provider
 - Detects automatically the browser language as a default locale
-- Exposes a function to update the Provider config
+- Exposes a [React Hook](https://reactjs.org/docs/hooks-overview.html) to update the Provider config
 - Ability to render a number or a currency with any html tag
 - Props match [Intl.NumberFormat constructor arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters)
-
-## Support
 - [Works in any modern browsers, and IE >= 11](https://caniuse.com/#feat=internationalization)
 
 ## Installation
@@ -53,9 +51,9 @@ You don't even need to pass a `locale` prop, by default it will try guess the lo
 
 ## Recommended usage with a React Context Provider
 
-The recommended way to use it would be with a Context.Provider, this will allow you to have a global configuration so you don't need to pass props every time you format a number or a currency.
+The recommended way to use it would be with a [Context.Provider](https://reactjs.org/docs/context.html#contextprovider), this will allow you to have a global configuration so you don't need to pass props every time you format a number or a currency.
 
-A provider `IntlProvider` is exposed with a default config, but you can you set your own config and use it in your `App` component.
+A provider `IntlProvider` is exposed with a default config, but you can you set your own config and use it in your `App` component. Also it's exposed a [React Hook](https://reactjs.org/docs/hooks-overview.html) `useIntl` to be able to [update the formatting configuration for the Provider](https://react-intl-number-format.netlify.com/recipes#change-the-context-provider-configuration-programatically).
 
 ```js
 // In your App.js or similar...
