@@ -11,9 +11,6 @@ node_modules
 # dotenv environment variables file
 .envrc
 
-# build directory
-dist
-
 # Operating system temp files
 .DS_Store
 
