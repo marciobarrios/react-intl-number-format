@@ -9,7 +9,7 @@ Tiny React components wrapping the ECMAScript Internationalization API with sane
 
 To see in detail the components `Number` and `Currency` with the list of props and examples please [check the documentation site](https://react-intl-number-format.netlify.com/).
 
-You can also play with `react-intl-number-format` in a [CodeSandbox](https://codesandbox.io/s/reactintlnumberformat-3o5yg).
+You can also play with `react-intl-number-format` in a [CodeSandbox](https://codesandbox.io/s/react-intl-number-format-u1rt3).
 
 ## Features
 
