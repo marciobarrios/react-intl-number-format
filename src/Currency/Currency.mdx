@@ -35,6 +35,9 @@ Props are matching `Intl.NumberFormat` parameters (with some exception). So [if 
   <Currency as="span" maximumFractionDigits={3}>
     201300.9832
   </Currency>
+  <Currency locale="en-US" currency="USD" notation="compact">
+    20130
+  </Currency>
 </Playground>
 
 The recommended way to use this component is within a React Context Provider to set a global config.

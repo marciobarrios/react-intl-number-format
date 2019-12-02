@@ -73,6 +73,8 @@ describe("Number", () => {
         maximumFractionDigits: 10,
         minimumSignificantDigits: 1,
         maximumSignificantDigits: 10,
+        notation: "standard",
+        compactDisplay: "short",
       }
 
       const { container } = render(

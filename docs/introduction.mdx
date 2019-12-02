@@ -46,6 +46,11 @@ const Foo = () => (
 const Bar = () => (
   <Currency locale="en-US" currency="USD">20000</Currency>
 )
+
+// renders $20K
+const FooBar = () => (
+  <Currency locale="en-US" currency="USD" notation="compact">20130</Currency>
+)
 ```
 
 You don't even need to pass a `locale` prop, by default it will try guess the locale from the browser.

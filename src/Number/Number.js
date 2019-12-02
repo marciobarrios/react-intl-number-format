@@ -17,6 +17,8 @@ const Number = ({
   maximumFractionDigits,
   minimumSignificantDigits,
   maximumSignificantDigits,
+  notation,
+  compactDisplay,
 }) => {
   const context = useIntl()
 
@@ -29,6 +31,7 @@ const Number = ({
   const optionsFromProps = {
     ...(isDefined(localeMatcher) && { localeMatcher }),
     ...(isDefined(currency) && { currency }),
+    ...(isDefined(currencyStyle) && { style: currencyStyle }),
     ...(isDefined(currencyDisplay) && { currencyDisplay }),
     ...(isDefined(useGrouping) && { useGrouping }),
     ...(isDefined(minimumIntegerDigits) && { minimumIntegerDigits }),
@@ -36,7 +39,8 @@ const Number = ({
     ...(isDefined(maximumFractionDigits) && { maximumFractionDigits }),
     ...(isDefined(minimumSignificantDigits) && { minimumSignificantDigits }),
     ...(isDefined(maximumSignificantDigits) && { maximumSignificantDigits }),
-    ...(isDefined(currencyStyle) && { style: currencyStyle }),
+    ...(isDefined(notation) && { notation }),
+    ...(isDefined(compactDisplay) && { compactDisplay }),
   }
 
   const setLocale = locale || localeFromContext || defaultIntlConfig.locale
@@ -74,6 +78,15 @@ Number.propTypes = {
   minimumSignificantDigits: PropTypes.number,
   /** The maximum number of significant digits to use [1-21] */
   maximumSignificantDigits: PropTypes.number,
+  /** The formatting that should be displayed for the number, the defaults is "standard" */
+  notation: PropTypes.oneOf([
+    "standard",
+    "scientific",
+    "engineering",
+    "compact",
+  ]),
+  /** Used only when notation is "compact", takes either "short" (default) or "long" */
+  compactDisplay: PropTypes.oneOf(["short", "long"]),
 }
 
 Number.defaultProps = {

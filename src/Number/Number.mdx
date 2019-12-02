@@ -29,6 +29,9 @@ Props are matching `Intl.NumberFormat` parameters (with some exception). So [if 
   <Number as="span" maximumFractionDigits={3}>
     201300.9832
   </Number>
+  <Number locale="en-US" notation="compact">
+    20130
+  </Number>
 </Playground>
 
 The recommended way to use this component is within a React Context Provider to set a global config.
