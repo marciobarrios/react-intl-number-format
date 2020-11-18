@@ -86,7 +86,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-testing-library": "^7.0.1",
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^17.2.3"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
